@@ -3,7 +3,8 @@
 Quelques corrigés et exemples de code pour la session "react" de The Hacking Project.
 
 N'hésitez pas à contacter votre mentor (@polosson) pour toute question sur le code présent dans
-ce repo.
+ce repo. Aussi, si vous voulez soumettre une pull request parce que vous avez trouvé un bug,
+ne vous gênez surtout pas ! 👍
 
 Cheers !
 
