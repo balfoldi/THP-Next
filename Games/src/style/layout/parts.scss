@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    transition: all $transition-time;
+    outline: 0;
+}
+
+blockquote {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: $color-lighter;
+
+    .svg-inline--fa {
+        margin: 0 .3rem .2rem 0;
+        vertical-align: middle;
+        font-size: 1.5rem;
+    }
+}
+
+table {
+    margin-bottom: 1rem;
+
+    th {
+        background-color: $color-lighter;
+    }
+
+    th,
+    td {
+        padding: .5rem;
+        text-align: left;
+        border-left: 1px solid $color-light;
+        border-top: 1px solid $color-light;
+
+        &:last-child {
+            border-right: 1px solid $color-light;
+        }
+    }
+
+    tr:last-child {
+        td {
+            border-bottom: 1px solid $color-light;
+        }
+    }
+}

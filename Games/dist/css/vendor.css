@@ -1,0 +1,131 @@
+/* lato-100normal - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src:
+    local('Lato Thin '),
+    local('Lato-Thin'),
+    url(/fonts/5d621ef7ab4241807ec2b95eb1d607cc.woff2) format('woff2'), 
+    url(/fonts/5a8eb775259e32d96521bd1a863781f3.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-100italic - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100;
+  src:
+    local('Lato Thin italic'),
+    local('Lato-Thinitalic'),
+    url(/fonts/89b95baaf00652c7c3afa0b255dc3d42.woff2) format('woff2'), 
+    url(/fonts/e501e52fadfacb5329ed797d91b10209.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-300normal - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Lato Light '),
+    local('Lato-Light'),
+    url(/fonts/917632e36982ca7933c801de445a1812.woff2) format('woff2'), 
+    url(/fonts/4d96f9e685a54d1ef6cfd4777b1a5fc1.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-300italic - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Lato Light italic'),
+    local('Lato-Lightitalic'),
+    url(/fonts/dc62e1fd720db6f7d41857fab0cb92d4.woff2) format('woff2'), 
+    url(/fonts/91aedf0998a81f1a78e3bf9ea633b0fd.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-400normal - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Lato Regular '),
+    local('Lato-Regular'),
+    url(/fonts/65e877e527022735c1a1bf5ae6183cf6.woff2) format('woff2'), 
+    url(/fonts/319df0f5492062b546b0de9dcb568cb9.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-400italic - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Lato Regular italic'),
+    local('Lato-Regularitalic'),
+    url(/fonts/09172b1910dff418491f31e28ca0c1d8.woff2) format('woff2'), 
+    url(/fonts/17e7244f4b78c6b2c7e149cc43ea6384.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-700normal - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Lato Bold '),
+    local('Lato-Bold'),
+    url(/fonts/f1405bd8a987c2ea8a67be8c371af61b.woff2) format('woff2'), 
+    url(/fonts/a354bb0b0b0f22de7befcfa340a45a84.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-700italic - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Lato Bold italic'),
+    local('Lato-Bolditalic'),
+    url(/fonts/5da2171e8560e58e6c91443d4addab8f.woff2) format('woff2'), 
+    url(/fonts/be7f3d32a138ba64b9d04fa3a87d4eaa.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-900normal - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    local('Lato Black '),
+    local('Lato-Black'),
+    url(/fonts/f33015cf2124b2046860d524d73bb84a.woff2) format('woff2'), 
+    url(/fonts/22f1d97be275c94e30d70cbcff4c22fe.woff) format('woff'); /* Modern Browsers */
+}
+
+/* lato-900italic - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    local('Lato Black italic'),
+    local('Lato-Blackitalic'),
+    url(/fonts/0e059de01500f773b5282613f528838c.woff2) format('woff2'), 
+    url(/fonts/bd29000d14b782484b3247cdd2bbe7ef.woff) format('woff'); /* Modern Browsers */
+}
+
+

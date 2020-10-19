@@ -1,0 +1,36 @@
+@import '../../style/variables';
+
+.PageList {
+    &__header {
+        display: flex;
+        padding: 0 10px;
+
+        &__title {
+            flex: 1;
+        }
+
+        input[type=search] {
+            flex: 0 0 auto;
+            margin: 10px 0;
+            background-color: $color-darkest;
+            color: $color-lightest;
+            border-color: $color-dark;
+        }
+
+        .Button {
+            margin: 10px 0 10px 10px;
+        }
+    }
+
+    &__games {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+
+        .GameCard {
+            flex: 1 1 300px;
+            margin: 10px;
+        }
+    }
+}
