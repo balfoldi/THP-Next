@@ -1,0 +1,10 @@
+.Clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    .Client {
+        flex: 1 1 300px;
+    }
+}
