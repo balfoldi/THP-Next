@@ -28,7 +28,7 @@ const BlocNote = ({ storedNotes }) => {
         }
 
         const allIds = notes.map((note) => Number.parseInt(note.id));
-        const lastId = Math.max(...allIds) || 0;
+        const lastId = Math.max(0, ...allIds);
         const newNote = { ...noteToSave, id: lastId + 1 };
         setNotes([...notes, newNote]);
         setSelectedNote(newNote);
