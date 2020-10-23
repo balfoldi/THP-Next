@@ -1,0 +1,9 @@
+.NotesList {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .NoteListItem + .NoteListItem {
+        margin-top: 30px;
+    }
+}
