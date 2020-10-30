@@ -37,3 +37,9 @@ générés aléatoirement avec la lib "Faker".
 Dans le dossier [/bloc-note](/bloc-note) vous trouverez une version du projet validant de la semaine
 n°4, où il vous était demandé de créer une mini application de prise de notes, en utilisant le
 `localStorage` pour la sauvegarde dans le navigateur.
+
+## Une démo de la lib `i18next` (et `react-i18next`)
+
+Dans le dossier [/i18next](/i18next) on trouvera une mini-application multilingue, utilisant `i18next`
+et `react-i18next` pour la gestion de l'internationalisation. Un router est aussi présent, pour montrer
+comment faire pour traduire les URLs des routes (une solution parmi d'autres...).
