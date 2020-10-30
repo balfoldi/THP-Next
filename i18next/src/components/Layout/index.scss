@@ -1,0 +1,10 @@
+.Layout {
+    &__header {
+        display: flex;
+        align-items: center;
+
+        .NavBar {
+            flex: 1;
+        }
+    }
+}
