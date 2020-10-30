@@ -1,0 +1,8 @@
+.NavBar {
+    display: flex;
+
+    &__item {
+        flex: 1;
+        list-style: none;
+    }
+}
