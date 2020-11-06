@@ -43,3 +43,10 @@ n°4, où il vous était demandé de créer une mini application de prise de not
 Dans le dossier [/i18next](/i18next) on trouvera une mini-application multilingue, utilisant `i18next`
 et `react-i18next` pour la gestion de l'internationalisation. Un router est aussi présent, pour montrer
 comment faire pour traduire les URLs des routes (une solution parmi d'autres...).
+
+## Une démo de la lib `mobx` (et `mobx-react`)
+
+Dans le dossier [/mobx](/mobx) on trouvera une mini-application ultra simple, utilisant `mobx`
+et `mobx-react` pour la gestion d'un state global. Ce state global sert uniquement à gérer l'état
+"connecté ou non" d'un utilisateur, en utilisant un faux API (fichier .json dans dossier public/).  
+Pour la doc de Mobx, voir ici : [mobx.js.org/README](https://mobx.js.org/README.html)
