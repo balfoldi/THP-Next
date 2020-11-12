@@ -31,7 +31,6 @@ Dans le dossier [/hello-react](/hello-react) vous trouverez un "corrigé" du pre
 de la session React, qui utilise donc des *"Class-components"* pour créer une liste de clients
 générés aléatoirement avec la lib "Faker".
 
-
 ## L'appli "Bloc-note" (React)
 
 Dans le dossier [/bloc-note](/bloc-note) vous trouverez une version du projet validant de la semaine
@@ -50,3 +49,8 @@ Dans le dossier [/mobx](/mobx) on trouvera une mini-application ultra simple, ut
 et `mobx-react` pour la gestion d'un state global. Ce state global sert uniquement à gérer l'état
 "connecté ou non" d'un utilisateur, en utilisant un faux API (fichier .json dans dossier public/).  
 Pour la doc de Mobx, voir ici : [mobx.js.org/README](https://mobx.js.org/README.html)
+
+## Des scripts d'algorithmes du projet de la semaine 07
+
+Dans le dossier [/algorithmie](/algorithmie), une version possible des scripts d'algo à faire
+pour le projet validant de la semaine 07.
