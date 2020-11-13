@@ -54,3 +54,8 @@ Pour la doc de Mobx, voir ici : [mobx.js.org/README](https://mobx.js.org/README.
 
 Dans le dossier [/algorithmie](/algorithmie), une version possible des scripts d'algo à faire
 pour le projet validant de la semaine 07.
+
+## Une démo de Typescript et des tests unitaires avec Jest
+
+Dans le dossier [/typescript](/typescript) on trouvera une mini-application React écrite en Typescript,
+et comportant quelques fonctions utilitaires qui sont testées avec `Jest` (voir le dossier `src/utils`)
