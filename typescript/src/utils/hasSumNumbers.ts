@@ -1,5 +1,5 @@
 
-const hasSumNumbers = (numbers, sumTarget) => {
+const hasSumNumbers = (numbers: number[], sumTarget: number) => {
     const numbersMap = new Map();
 
     return numbers.some((value, index) => {
