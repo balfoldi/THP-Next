@@ -28,6 +28,28 @@ describe("GildedRose Shop.updateQuality", () => {
     });
   });
 
+  it("Baisse de 2 la qualité et de 1 le sellIn d'items 'Conjured'", () => {
+    const listItems = [
+      new Item('Conjured Mana Cake', 3, 6),
+      new Item('Conjured Aged Brie', 10, 20),
+      new Item('Mana Cake', 3, 6),
+    ];
+
+    const gildedRose = new Shop(listItems);
+    const results = gildedRose.updateQuality();
+
+    const expected = [
+      { sellIn: 2, quality: 4 },
+      { sellIn: 9, quality: 18 },
+      { sellIn: 2, quality: 5 },
+    ];
+
+    expected.forEach((testCase, index) => {
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
+    });
+  });
+
   it("Vérifie que la qualité ne descend pas en dessous de 0", () => {
     const listItems = [
       new Item('+5 Dexterity Vest', 10, 0),

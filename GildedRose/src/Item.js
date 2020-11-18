@@ -3,7 +3,9 @@ class Item {
     this.MIN_QUALITY = 0;
     this.MAX_QUALITY = 50;
 
-    this.NORMAL_DECREASE = 1;
+    const isConjured = /^conjured*/i.test(name);
+
+    this.NORMAL_DECREASE = isConjured ? 2 : 1;
     this.QUICK_DECREASE = 2;
 
     this.SPECIAL_ITEMS = {

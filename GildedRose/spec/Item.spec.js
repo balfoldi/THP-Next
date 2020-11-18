@@ -7,6 +7,7 @@ describe("GildedRose Item.constructor", () => {
     expect(item.sellIn).toBe(20);
     expect(item.quality).toBe(50);
     expect(item.type).toBe('NORMAL');
+    expect(item.NORMAL_DECREASE).toBe(1);
   });
 
   it("Instancie correctement un item normal même si on lui passe une qualité > 50", () =>  {
@@ -41,6 +42,18 @@ describe("GildedRose Item.constructor", () => {
     expect(item.sellIn).toBe(10);
     expect(item.quality).toBe(15);
     expect(item.type).toBe('IMPROVING_UNTIL_DEADLINE');
+  });
+
+  it("Instancie correctement un item 'Conjured'", () => {
+    const item = new Item('Conjured testing object', 13, 25);
+    expect(item.name).toBe('Conjured testing object');
+    expect(item.NORMAL_DECREASE).toBe(2);
+  });
+
+  it("Instancie correctement un item 'Conjured' même en majuscules", () => {
+    const item = new Item('ConJurED testing object', 13, 25);
+    expect(item.name).toBe('ConJurED testing object');
+    expect(item.NORMAL_DECREASE).toBe(2);
   });
 });
 
@@ -83,13 +96,13 @@ describe("GildedRose Item.updateQuality", () => {
     expect(item.quality).toBe(16);
   });
 
-  it("Retourne 0 si sellIn est égal à 0 pour un item spécial 'Backstage'", () => {
+  it("Met la qualité à 0 si sellIn est égal à 0 pour un item spécial 'Backstage'", () => {
     const item = new Item('Backstage passes to a TAFKAL80ETC concert', 0, 15);
     item.updateQuality();
     expect(item.quality).toBe(0);
   });
 
-  it("Retourne 0 si sellIn est inférieur à 0 pour un item spécial 'Backstage'", () => {
+  it("Met la qualité à 0 si sellIn est inférieur à 0 pour un item spécial 'Backstage'", () => {
     const item = new Item('Backstage passes to a TAFKAL80ETC concert', -2, 15);
     item.updateQuality();
     expect(item.quality).toBe(0);
@@ -105,5 +118,17 @@ describe("GildedRose Item.updateQuality", () => {
     const item = new Item('Backstage passes to a TAFKAL80ETC concert', 9, 15);
     item.updateQuality();
     expect(item.quality).toBe(17);
+  });
+
+  it("Décrémente la quantité de 2 pour un Item 'Conjured' quand sellIn > 0", () => {
+    const item = new Item('Conjured Mana cake', 10, 15);
+    item.updateQuality();
+    expect(item.quality).toBe(13);
+  });
+
+  it("Décrémente la quantité de 2 pour un Item 'Conjured' quand sellIn <= 0", () => {
+    const item = new Item('Conjured Mana cake', -1, 15);
+    item.updateQuality();
+    expect(item.quality).toBe(13);
   });
 });
