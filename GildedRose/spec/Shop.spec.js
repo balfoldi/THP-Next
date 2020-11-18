@@ -1,11 +1,11 @@
-var { Shop, Item } = require('../src/gilded_rose.js');
+const { Shop, Item } = require('../src/gilded_rose');
 
-describe("GildedRose shop manager", () => {
+describe("GildedRose Shop.updateQuality", () => {
   it("Ne fait rien quand on ne lui passe aucun item", () => {
     const gildedRose = new Shop();
-    const items = gildedRose.updateQuality();
-    expect(items).toBeInstanceOf(Array)
-    expect(items).toHaveSize(0);
+    const results = gildedRose.updateQuality();
+    expect(results).toBeInstanceOf(Array)
+    expect(results).toHaveSize(0);
   });
 
   it("Baisse de 1 la qualité et le sellIn d'items normaux", () => {
@@ -15,16 +15,16 @@ describe("GildedRose shop manager", () => {
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: 9, quality: 19 },
       { sellIn: 2, quality: 5 },
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 
@@ -32,14 +32,14 @@ describe("GildedRose shop manager", () => {
     const listItems = [
       new Item('+5 Dexterity Vest', 10, 0),
       new Item('Mana Cake', 0, 0),
-      new Item('Improbable Artifact', 0, 0),
+      new Item('Improbable Artifact', 0, -1),
       new Item('Magic stone', -2, 0),
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: 9, quality: 0 },
       { sellIn: -1, quality: 0 },
       { sellIn: -1, quality: 0 },
@@ -47,8 +47,8 @@ describe("GildedRose shop manager", () => {
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 
@@ -57,20 +57,21 @@ describe("GildedRose shop manager", () => {
       new Item('Aged Brie', 10, 49),
       new Item('Aged Brie', 15, 50),
       new Item('Backstage passes to a TAFKAL80ETC concert', 5, 48),
+      new Item('Mana Cake', 4, 52),
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: 9, quality: 50 },
       { sellIn: 14, quality: 50 },
       { sellIn: 4, quality: 50 },
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 
@@ -81,36 +82,38 @@ describe("GildedRose shop manager", () => {
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: -1, quality: 18 },
       { sellIn: -1, quality: 4 },
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 
   it("Augmente la qualité de 1 pour 'Aged Brie' et 'Backstage passes'", () => {
     const listItems = [
       new Item('Aged Brie', 20, 30),
+      new Item('Aged Brie', 0, 45),
       new Item('Backstage passes to a TAFKAL80ETC concert', 20, 30),
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: 19, quality: 31 },
+      { sellIn: -1, quality: 46 },
       { sellIn: 19, quality: 31 },
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 
@@ -121,16 +124,16 @@ describe("GildedRose shop manager", () => {
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: 8, quality: 31 },
       { sellIn: 8, quality: 32 },
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 
@@ -141,16 +144,16 @@ describe("GildedRose shop manager", () => {
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: 3, quality: 31 },
       { sellIn: 3, quality: 33 },
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 
@@ -161,16 +164,16 @@ describe("GildedRose shop manager", () => {
     ];
 
     const gildedRose = new Shop(listItems);
-    const items = gildedRose.updateQuality();
+    const results = gildedRose.updateQuality();
 
-    var expected = [
+    const expected = [
       { sellIn: 14, quality: 11 },
       { sellIn: 10, quality: 22 },
     ];
 
     expected.forEach((testCase, index) => {
-      expect(items[index].quality).toBe(testCase.quality);
-      expect(items[index].sellIn).toBe(testCase.sellIn);
+      expect(results[index].quality).toBe(testCase.quality);
+      expect(results[index].sellIn).toBe(testCase.sellIn);
     });
   });
 });
