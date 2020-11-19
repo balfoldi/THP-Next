@@ -59,3 +59,8 @@ pour le projet validant de la semaine 07.
 
 Dans le dossier [/typescript](/typescript) on trouvera une mini-application React écrite en Typescript,
 et comportant quelques fonctions utilitaires qui sont testées avec `Jest` (voir le dossier `src/utils`)
+
+## Une version du refactoring du mini-projet "Gilded Rose"
+
+Dans le dossier [/GildedRose](/GildedRose), vous trouverez une version du refactoring du mini-projet
+"Gilded Rose", avec les tests unitaires associés.
