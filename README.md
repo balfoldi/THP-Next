@@ -64,3 +64,5 @@ et comportant quelques fonctions utilitaires qui sont testées avec `Jest` (voir
 
 Dans le dossier [/GildedRose](/GildedRose), vous trouverez une version du refactoring du mini-projet
 "Gilded Rose", avec les tests unitaires associés.
+
+Petite modif pour démo commit avec n° de ticket
